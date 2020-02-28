@@ -1,1 +1,12 @@
-
+Download Arduino Ide : Link https://www.arduino.cc/en/Main/Software
+Pilih Arduino IDE Berdasarkan Platform OS Yang Anda Gunakan, Lalu Download
+Installasi Arduino IDE
+Pastikan Anda Menhubungkan Arduino Chip Microcontroler Anda Pada PC Yang Anda Gunakan
+Download Driver USB Serial Communication : Link http://www.wch.cn/downloads/file/65.html
+Installasi CH34SER
+Update Additional Boards Manager Dengan Klik File > Preferences > URL : Copy Link Berikut Ini :http://arduino.esp8266.com/stable/package_esp8266com_index.json
+Berikutnya Buka Menu File Tools > Board Manager > Search ESP8266 > Installasi
+Keluar Aplikasi Arduino IDE Lalu Buka Kembali dan Hubungkan Kembali NodMCU
+Buka Menu File Tools > Board Manager > Cari Board NodMCU 0.9 (ESP-12)
+Setting Upload Speed 115200
+Coba Buat Program Sederhana Lalu Upload (Untuk Memastikan NodMCU Bisa Terbaca PC dan Telah Dapat di Program)
