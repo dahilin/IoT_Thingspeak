@@ -1,0 +1,36 @@
+#include <DHT.h>  
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h>;
+#include <ThingSpeak.h>;
+String apiKey = "WRITE API KEY";     
+const char *ssid =  "SSID WIFI";    
+const char *pass =  "PASSWORD WIFI";
+const char* server = "api.thingspeak.com";
+#define DHTPIN 'PIN DHT'         
+DHT dht(DHTPIN, DHT11);
+WiFiClient client;
+unsigned long myChannelNumber = CHANNEL NUMBER;
+const char * myWriteAPIKey = "WRITE API KEY"; 
+void setup() 
+{
+       Serial.begin(9600);
+       delay(10);
+       dht.begin();
+       Serial.println("Connecting ");
+       Serial.println(ssid);
+       WiFi.begin(ssid, pass);
+       ThingSpeak.begin(client);
+}
+ 
+void loop() 
+{
+      float h = dht.readHumidity();
+      float t = dht.readTemperature();
+                    if (isnan(h) || isnan(t)) 
+                 {
+                     Serial.println("Sensor Tidak Dapat Mendeteksi");
+                      return;
+                 }
+                 ThingSpeak.writeField(myChannelNumber, NumberFielad, Variable Data, myWriteAPIKey);
+                 delay(100);
+}
