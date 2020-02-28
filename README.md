@@ -15,6 +15,6 @@ Perangkat Keras Yang Digunakan, Diantaranya :
 Perangkat Lunak Yang Digunakan, Diantaranya :
 1.Arduino IDE
 2.Thingspeak Platform (Online)
-3.Library : ESP8266, ThingSpeak
+3.Library : ESP8266, ThingSpeak, Adafruit_Sensor-master, DHT_Library-1, ESPDailyTask-master
 
 
